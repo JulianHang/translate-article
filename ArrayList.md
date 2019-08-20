@@ -81,7 +81,7 @@
     * time in the future.
 
     iterator、listIterator方法返回iterators（迭代器）
-    迭代器被称为fail-fast（快速失败）：当迭代器被创建后的任何时间内修改结构，除了自身add或remove方法外（itertor#add）的任何方式，迭代器将会抛出ConcurrentModificationException异常（在获取迭代器后，只能通过iterator#add或iterator#remove操作元素，要是用ArrayList#remove移除元素后，在接着使用迭代器则会抛出错误）.
+    迭代器被称为fail-fast（快速失败）：当迭代器被创建后的任何时间内修改结构，除了自身add或remove方法外（iterator#add）的任何方式，迭代器将会抛出ConcurrentModificationException异常（在获取迭代器后，只能通过iterator#add或iterator#remove操作元素，要是用ArrayList#remove移除元素后，在接着使用迭代器则会抛出错误）.
     因此，面对并发修改，迭代器更加快速失败，而不是在未来的未确定时刻（多线程）上随意冒险、作不确定的行为.
 
     * <p>Note that the fail-fast behavior of an iterator cannot be guaranteed
