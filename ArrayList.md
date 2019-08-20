@@ -43,7 +43,7 @@
     * operation.  This may reduce the amount of incremental reallocation.
 
     应用可以在添加许多元素之前通过调用ensureCapacity方法来增加ArrayList对象的容量.
-    它可能会减少增量再分配的次数（相当于提高了效率）
+    它可能会减少增量再分配的次数（一次性增加更大的容量，减少了多次增加相对小的容量，提高了效率，不过有可能浪费资源）
 
     * <p><strong>Note that this implementation is not synchronized.</strong>
     * If multiple threads access an <tt>ArrayList</tt> instance concurrently,
@@ -81,7 +81,7 @@
     * time in the future.
 
     iterator、listIterator方法返回iterators（迭代器）
-    迭代器被称为fail-fast（快速失败）：当迭代器被创建后，无论何时以何种方式，除了自身之外（iterator），add、remove修改结构都会抛出ConcurrentModificationException异常.
+    迭代器被称为fail-fast（快速失败）：当迭代器被创建后的任何时间内修改结构，除了自身add或remove方法外（itertor#add）的任何方式，迭代器将会抛出ConcurrentModificationException异常（在获取迭代器后，只能通过iterator#add或iterator#remove操作元素，要是用ArrayList#remove移除元素后，在接着使用迭代器则会抛出错误）.
     因此，面对并发修改，迭代器更加快速失败，而不是在未来的未确定时刻（多线程）上随意冒险、作不确定的行为.
 
     * <p>Note that the fail-fast behavior of an iterator cannot be guaranteed
@@ -100,6 +100,6 @@
     * <a href="{@docRoot}/../technotes/guides/collections/index.html">
     * Java Collections Framework</a>.
 
-    该类是Java Collections Framework的一个成员.
+    该类是Java Collections Framework的一员.
 
 ```
