@@ -2,3 +2,4 @@
 ### Vector
 ### Spliterator
 ### LinkedList
+### HashMap
