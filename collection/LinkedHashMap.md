@@ -111,8 +111,8 @@
     * unsynchronized access to the map:<pre>
     *   Map m = Collections.synchronizedMap(new LinkedHashMap(...));</pre>
     
-    如果外部对象不存在，应该使用Collections.synchronizedMap来包裹HashMap对象.
-    该方法最好在HashMap创建时调用，为了防止偶然性的非线程安全访问HashMap.
+    如果外部对象不存在，应该使用Collections.synchronizedMap来包裹LinkedHashMap对象.
+    该方法最好在LinkedHashMap创建时调用，为了防止偶然性的非线程安全访问LinkedHashMap.
 
     * A structural modification is any operation that adds or deletes one or more
     * mappings or, in the case of access-ordered linked hash maps, affects
