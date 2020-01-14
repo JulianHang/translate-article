@@ -53,7 +53,7 @@
 
         4 如果由于中断而在步骤2中将线程t从m的等待集中移除，则t的中断状态设置为false，并且wait方法抛出InterruptedException
 
-
+        ！！！！即使线程从等待集中删除，也必须要等待获取到锁后才能继续往下走
      
 
      通知（Notification）
