@@ -9,7 +9,7 @@
 
     1.4 Notation
 
-    表示
+    符号
 
     Throughout this specification we refer to classes and interfaces drawn from the
     Java SE platform API. Whenever we refer to a class or interface (other than those
